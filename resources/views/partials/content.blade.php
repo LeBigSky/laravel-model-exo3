@@ -8,9 +8,15 @@
     @foreach ($membres as $membre)
     <div class="card">
         <div class="row m-0 m-0">
-            <div class="col d-flex justify-content-center border">
+            @if ( $membre['genre'] == 'Homme')
+            <div class="col d-flex justify-content-center border bg-primary text-white">
+                <h3 >{{ $membre['nom'] }}</h3> 
+            </div>
+            @else
+            <div class="col d-flex justify-content-center border bg-danger text-white">
                 <h3>{{ $membre['nom'] }}</h3> 
             </div>
+            @endif
             <div class="col d-flex justify-content-center border">
                 <h3>{{ $membre['age'] }}</h3>
              </div>
@@ -20,7 +26,10 @@
         </div>
     </div>
 @endforeach
-<h1>Total des membres {{ $total }}</h1>
+<div class="py-5 d-flex justify-content-center">
+ <h1>Total des membres <span class="border rounded bg-warning">{{ $total }}</span> </h1>   
+</div>
+
 </Section>
 <hr>
 
