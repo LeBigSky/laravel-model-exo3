@@ -40,8 +40,7 @@
         <h2>AGE</h2>
         <h2>GENRE</h2>
         </div>
-    @foreach ($membres as $membre)
-    @if ( $membre['genre'] == 'Homme')
+    @foreach ($hommes as $membre)
        <div class="card">
         <div class="row m-0 m-0">
             <div class="col d-flex justify-content-center border">
@@ -55,7 +54,6 @@
              </div>
         </div>
     </div> 
-    @endif
 @endforeach
 </Section>
 <hr>
@@ -67,8 +65,7 @@
         <h2>AGE</h2>
         <h2>GENRE</h2>
         </div>
-    @foreach ($membres as $membre)
-    @if ( $membre['genre'] == 'Femme')
+    @foreach ($femmes as $membre)
        <div class="card">
         <div class="row m-0">
             <div class="col d-flex justify-content-center border">
@@ -82,7 +79,6 @@
              </div>
         </div>
     </div> 
-    @endif
 @endforeach
 </Section>
 <hr>
@@ -94,8 +90,7 @@
         <h2>AGE</h2>
         <h2>GENRE</h2>
         </div>
-    @foreach ($membres as $membre)
-    @if ( $membre['genre'] == 'Homme' && $membre['age'] >= 18 && $membre['age'] < 25 )
+    @foreach ($hommes18 as $membre)
        <div class="card">
         <div class="row m-0">
             <div class="col d-flex justify-content-center border">
@@ -109,7 +104,6 @@
              </div>
         </div>
     </div> 
-    @endif
 @endforeach
 </Section>
 <hr>
@@ -121,8 +115,8 @@
         <h2>AGE</h2>
         <h2>GENRE</h2>
         </div>
-    @foreach ($membres as $membre)
-    @if ( $membre['genre'] == 'Femme' && $membre['age'] >= 18 && $membre['age'] < 25 )
+    @foreach ($femmes18 as $membre)
+
        <div class="card">
         <div class="row m-0">
             <div class="col d-flex justify-content-center border">
@@ -136,7 +130,6 @@
              </div>
         </div>
     </div> 
-    @endif
 @endforeach
 </Section>
 <hr>
@@ -151,8 +144,7 @@
         <h2>AGE</h2>
         <h2>GENRE</h2>
         </div>
-    @foreach ($membres as $membre)
-    @if (  $membre['age'] < 18 || $membre['age'] > 24 )
+    @foreach ($hc as $membre)
        <div class="card">
         <div class="row m-0">
             <div class="col d-flex justify-content-center border">
@@ -166,7 +158,6 @@
              </div>
         </div>
     </div> 
-    @endif
 @endforeach
 </Section>
 <hr>
