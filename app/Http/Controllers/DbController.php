@@ -9,7 +9,6 @@ class DbController extends Controller
 {
     public function db (){
         $membres= Membre::all();
-        // $hommes = laravelmodelexo2::table('membres')->where('genre', '=', 'homme')->get();
         $total = Membre::count();
         $hommes = Membre::all()->where('genre','Homme');
         $femmes = Membre::all()->where('genre','Femme');
